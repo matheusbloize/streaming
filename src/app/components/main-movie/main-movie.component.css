@@ -1,0 +1,19 @@
+.main-movie .movieWallpaper {
+    width: 100vw;
+    height: 90vh;
+    object-fit: cover;
+    object-position: top;
+    opacity: .7;
+    transition: .5 ease;
+}
+
+.main-movie .movieWallpaper:hover {
+    filter: brightness(120%);
+}
+
+.movieLogo {
+    position: absolute;
+    top: 25vh;
+    width: 35vw;
+    left: 1vw;
+}

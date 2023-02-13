@@ -1,0 +1,45 @@
+.list-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-title {
+    margin-top: 5%;
+    margin-left: 3%;
+}
+
+.list-title h2 {
+    color: #99FFE4;
+    font-weight: 100;
+    font-size: 3em;
+}
+
+@media screen and (max-width: 800px) {
+    .list-title {
+        margin-top: 10%;
+    }
+
+    .list-content-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* @media screen and (max-width: 1200px) {
+    .list-content img {
+        width: 22vw;
+    }
+}
+
+
+
+@media screen and (max-width: 420px) {
+    .list-title {
+        margin-top: 20%;
+    }
+
+    .list-title h2 {
+        font-size: 2em;
+    }
+} */

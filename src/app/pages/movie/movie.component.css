@@ -1,0 +1,276 @@
+.movie-component {
+    height: 100vh;
+    display: flex;
+}
+
+.movie-content {
+    display: flex;
+    flex-direction: column;
+    color: #00FFBB;
+    text-shadow: 2px 2px 30px #00FF00;
+}
+
+.fixed {
+    width: 28vw;
+    top: 10vh;
+    left: 1vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed span {
+    margin-left: 4vw;
+}
+
+.movie-content h2 {
+    font-size: 2.5em;
+    display: inline-flex;
+    margin-left: 2vw;
+}
+
+.movie-content span {
+    margin-top: 2vh;
+    margin-left: 5vw;
+}
+
+.movie-content p {
+    display: inline-flex;
+    text-align: justify;
+    letter-spacing: 1.1px;
+    margin-top: 2vh;
+    font-weight: 400;
+}
+
+.side a, .side button {
+    background-color: #333333;
+    color: #00FFBB;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px #00FF00;
+    cursor: pointer;
+    margin-left: 2vw;
+    transition: .2s ease;
+}
+
+.side a:hover, .side button:hover {
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+    scale: 1.1;
+}
+
+.side a {
+    padding: 8px 24px;
+    border-radius: 10px;
+    text-transform: uppercase; 
+}
+
+.side button {
+    width: 3vw;
+    height: 5vh;
+    border-radius: 50%;
+    font-size: 1em;
+    border: none;
+}
+
+.side {
+    margin-top: 2vh;
+    width: 50vw;
+}
+
+.movie-show {
+    background-color: #1a1919;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 9;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@keyframes slide {
+    0%{
+        margin: 0;
+    }
+    100%{
+        margin: 2% 0;
+    }
+}
+
+.movie-alert {
+    background-color: #333;
+    color: #00FFBB;
+    text-align: center;
+    width: 50vw;
+    height: 30vh;
+    margin: 2% 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    border-top: 10px solid #00FFBB;
+    animation: slide .3s ease
+}
+
+.movie-alert h3 {
+    margin: 8% 0 5% 0;
+    font-size: 1.4em;
+}
+
+.movie-alert h4 {
+    font-size: 1em;
+}
+
+.movie-trailer {
+    display: none;
+    width: 70vw;
+    justify-content: center;
+}
+
+.movie-trailer iframe {
+    width: inherit;
+    height: 85vh;
+}
+
+@keyframes slideTop{
+    0%{
+        top: 0%;
+    }
+    100%{
+        top: 4%;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 4%;
+    z-index: 9;
+    left: 73%;
+    font-size: 2vw;
+    color: #00FFBB;
+    cursor: pointer;
+    transition: .5s ease hover;
+    animation: slideTop .3s ease;
+    display: none;
+}
+
+.close:hover, .returnHome:hover {
+    color: #fff;
+    scale: 1.1;
+}
+
+.returnHome {
+    margin: 1% 0;
+    font-size: 1.5em;
+    color: #00ffbb;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 0 .5em;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.movie-show .loading, .movie-content .loading {
+    top: 50%;
+}
+
+.movie-content .loading {
+    left: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+    .movie-content h2 {
+        font-size: 2em;
+    }
+
+    .movie-content p {
+        text-align: left;
+        font-size: 1em;
+        width: 60vw;
+    }
+
+    .side button {
+        width: 5vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .movie-content p {
+        font-size: .85em;
+        width: 85vw;
+    }
+
+    .side button {
+        width: 7vw;
+    }
+
+    @keyframes slide {
+        0%{
+            margin: 0;
+        }
+        100%{
+            margin: 5% 0;
+        }
+    }
+
+    .movie-alert {
+        width: 90vw;
+        margin: 5% 0;
+    }
+
+    .movie-alert h3 {
+        margin: 2% 0 8% 0;
+        max-width: 84vw;
+    }
+
+    .movie-alert h4 {
+        font-size: 1em;
+    }
+
+    @keyframes slideTop{
+        0%{
+            top: 0%;
+        }
+        100%{
+            top: 6%;
+        }
+    }
+
+    .close {
+        top: 6%;
+        left: 90%;
+        font-size: 4vw;
+    }
+
+    .movie-trailer {
+        width: 95vw;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .movie-content {
+        height: 100vh;
+    }
+
+    .movie-content h2 {
+        font-size: 1.5em;
+    }
+
+    .movie-content p {
+        font-size: .75em;
+        width: 90vw;
+    }
+
+    .side button {
+        width: 11vw;
+    }
+
+    .movie-alert h3 {
+        margin: 2% 0 12% 0;
+    }
+
+    .close {
+        left: 89%;
+        font-size: 6vw;
+    }
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+.footer-container {
+    background-color: #222;
+    height: 22vh;
+    display: block;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-icon a {
+    display: block;
+    font-family: 'Michroma', sans-serif;
+    color: #AAFFE8;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 2vh 0;
+}
+
+.footer-social-media-icons {
+    display: flex;
+}
+
+.footer-social-media {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 2vw;
+}
+
+.footer-social-media a, .footer-icon a {
+    color: #AAFFE8;
+    transition: scale .5s ease;
+    display: inline-block;
+}
+
+.footer-social-media a:hover, .footer-icon a:hover {
+    scale: 1.2;
+}

@@ -1,0 +1,24 @@
+<div class="movie-show">
+    <div class="loading"></div>
+    <div class="close" (click)="closeAlert()">X</div>
+    <div class="movie-alert">
+        <h3>Efetue o pagamento da mensalidade para continuar.</h3>
+        <h4>Infelizmente não foi possível processar seu pagamento.<br>Clique no X, aproveite e fique com o trailer.</h4>
+    </div>
+    <div class="returnHome" [routerLink]="''" style="display: none;" (click)="overflow()">Voltar</div>
+    <div class="movie-trailer">
+        <iframe [src]="videoTrailer | safe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
+<div class="movie-content">
+    <div class="loading"></div>
+    <div class="fixed">
+        <h2></h2>
+        <span></span>
+        <div class="side">
+            <a (click)="showMovie()" style="display: none;"></a>
+            <button style="display: none;" (click)="addToList()"></button>
+        </div>
+        <p></p>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.other-movie {
+    display: flex;
+    margin: 1vh 0;
+}
+
+.separator {
+    width: 100vw;
+    height: 5vh;
+    font-size: 1.5em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-left: 1.5vw;
+    color: #ccc;
+}

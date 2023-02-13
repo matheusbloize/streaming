@@ -1,0 +1,23 @@
+<div class="search-container">
+    <div class="search-top">
+        <h2>Search</h2>
+        <div class="search-area">
+            <input class="search-input" type="text">
+            <button class="search-button" (click)="getStream()">search</button>
+        </div>
+    </div>
+    <div class="search-content-grid">
+        <div class="cover">
+            <div class="loading"></div>
+        </div>
+        <div class="search-content" *ngFor="let t of tvSearch.results">
+            <img src="{{'https://image.tmdb.org/t/p/original' + t.poster_path}}" alt="Logo do Filme" (error)="posterNotFound(t.poster_path)" (click)="movieNotOnDb(t.name, t.poster_path)">
+            <h3>{{t.name}}</h3>
+        </div>
+        <div class="search-content" *ngFor="let m of movieSearch.results">
+            <img src="{{'https://image.tmdb.org/t/p/original' + m.poster_path}}" alt="Logo do Filme" (error)="posterNotFound(m.poster_path)" (click)="movieNotOnDb(m.title, m.poster_path)">
+            <h3>{{m.title}}</h3>
+        </div>
+        <span class="nothing">Nada no momento🤔</span>
+    </div>
+</div>

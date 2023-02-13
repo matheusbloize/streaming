@@ -1,0 +1,30 @@
+<div class="menu-container">
+    <div class="menu-icons">
+        <div class="menu-icon">
+            <a [routerLink]="''">S</a>
+        </div>
+        <div class="menu-icon">
+            <a [routerLink]="''">Home</a>
+        </div>
+        <div class="menu-icon">
+            <a [routerLink]="'list'">My list</a>
+        </div>
+        <div class="menu-icon">
+            <a [routerLink]="'search'">Search</a>
+        </div>
+    </div>
+    <div class="menu-profile" (mouseleave)="leaveProfile()">
+        <div class="profile-icon" (mouseover)="showProfile()">Profile</div>
+        <div class="showProfile" ></div>
+        <div class="profile-icon switchTheme" (click)="switchTheme()">
+            <div class="lightTheme">
+                <img src="assets/sun.png" alt="">
+            </div>
+            <div class="pointer">•</div>
+            <div class="darkTheme">
+                <img src="assets/moon.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</div>
