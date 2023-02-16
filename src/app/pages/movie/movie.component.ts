@@ -140,7 +140,11 @@ export class MovieComponent implements OnInit, AfterContentInit {
     let regex = new RegExp(/([a-zA-Z\.\*\-\/]{0,})(\/movie\/\d\/*)/)
     if (regex.test(location.pathname)) {
       let res = ''
-      location.pathname.length > 18 ? res = location.pathname.split('').slice(-2).join('') : res = location.pathname.split('').slice(-1).join('')
+      if(location.pathname.length === 8 || location.pathname.length === 9){
+        location.pathname.length > 8 ? res = location.pathname.split('').slice(-2).join('') : res = location.pathname.split('').slice(-1).join('')
+      } else {
+        location.pathname.length > 18 ? res = location.pathname.split('').slice(-2).join('') : res = location.pathname.split('').slice(-1).join('')
+      }
       AppComponent.resArr.push(res)
       this.setNewArr = [...new Set(AppComponent.resArr)]
       ListComponent.takeId(res)
@@ -278,6 +282,11 @@ export class MovieComponent implements OnInit, AfterContentInit {
 
   showMovie() {
     document.querySelector<HTMLElement>('.movie-show').style.display = 'flex'
+    if(document.body.style.backgroundColor === '' || document.body.style.backgroundColor === 'rgb(26, 25, 25)') {
+      document.querySelector<HTMLDivElement>('.movie-show').style.backgroundColor = 'rgb(26, 25, 25)'
+    } else {
+      document.querySelector<HTMLDivElement>('.movie-show').style.backgroundColor = 'rgb(232, 220, 220)'
+    }
     AppComponent.windowScroll()
     document.body.style.overflowY = 'hidden'
     setTimeout(() => {

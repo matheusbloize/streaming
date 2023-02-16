@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { AppComponent } from '../../app.component'
 import { arrayData } from '../../../assets/arrayData'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -9,8 +10,9 @@ import { arrayData } from '../../../assets/arrayData'
 })
 export class ListComponent implements OnInit, AfterContentInit {
   static listArr: any[] = []
+  teste: Function
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     AppComponent.windowScroll()
@@ -22,42 +24,6 @@ export class ListComponent implements OnInit, AfterContentInit {
 
   static makeList(id: string) {
     const div = document.createElement('div')
-    const coverElement = document.createElement('div')
-    coverElement.classList.add('coverElement')
-    coverElement.innerHTML = `
-    <div class="loading"></div>
-    `
-    const coverElementStyle = document.createElement('style')
-    coverElementStyle.innerHTML = 
-    `
-      .coverElement {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 99;
-        background-color: #66FFD6;
-      }
-
-      .loading {
-        top: 50%;
-        left: 50%;
-      }
-    `
-    coverElement.appendChild(coverElementStyle)
-    div.addEventListener('click', (e) => {
-      document.body.appendChild(coverElement)
-      let interval = setInterval(() => {
-        if (location.href !== `${location.origin}/streaming/movie/${(e.target as HTMLImageElement).getAttribute('id')}`) {
-          history.back()
-        }
-      }, 200)
-      setTimeout(()=>{
-        coverElement.style.display = 'none'
-        clearInterval(interval)
-      }, 3000)
-    })
     div.innerHTML = `
     <img src="${arrayData[parseInt(id) - 1]['imageCover']}" id="${arrayData[parseInt(id) - 1]['id']}"></img>
     `
@@ -99,7 +65,7 @@ export class ListComponent implements OnInit, AfterContentInit {
     }
     `
     div.appendChild(imgStyle)
-    this.updateList(div)
+    ListComponent.updateList(div)
   }
 
   static updateList(div: any) {
@@ -121,5 +87,13 @@ export class ListComponent implements OnInit, AfterContentInit {
     }
     let uniqueArr = [...new Set(ListComponent.listArr)]
     uniqueArr.forEach(item => document.querySelector('.list-content-grid').appendChild(item))
+    Array.from(document.querySelectorAll('.list-content')).forEach((item) =>{
+      item.addEventListener('click', (e: Event) => {
+        const target = e.target as HTMLImageElement
+        this.router.navigate(['movie', target.id])
+      })
+    })
   }
 }
+
+

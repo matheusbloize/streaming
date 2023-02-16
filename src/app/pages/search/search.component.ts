@@ -139,7 +139,7 @@ export class SearchComponent implements OnInit, AfterContentChecked {
       poster === '/bAFmcrCpXsJis5q0aaXvCz3dTiX.jpg' ||
       poster === '/f0CtZbae9cXj8bkWdCHzUHx5lsR.jpg' ||
       poster === '/oqkld2D0qcnSNRm15rYV2883JE3.jpg' ||
-      poster === '/N9jyoeH3wKhiHYNYLE9Pnnls9D.jpg' ||
+      poster === '/N9jyoeH3wKhiHYNYLE9Pnnls9D.jpg'  ||
       poster === '/ArWn6gCi61b3b3hclD2L0LOk66k.jpg' ||
       poster === '/4Lok3HBSfbQxibQZBygoVCwKKrZ.jpg' ||
       poster === '/nCbkOyOMTEwlEV0LtCOvCnwEONA.jpg' ||

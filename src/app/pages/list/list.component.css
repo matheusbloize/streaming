@@ -25,21 +25,3 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
-/* @media screen and (max-width: 1200px) {
-    .list-content img {
-        width: 22vw;
-    }
-}
-
-
-
-@media screen and (max-width: 420px) {
-    .list-title {
-        margin-top: 20%;
-    }
-
-    .list-title h2 {
-        font-size: 2em;
-    }
-} */
