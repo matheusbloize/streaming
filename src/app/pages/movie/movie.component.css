@@ -178,6 +178,12 @@
     left: 50%;
 }
 
+@media screen and (max-width: 1350px) {
+    .movie-content p {
+        font-size: .85em;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .movie-content h2 {
         font-size: 2em;
