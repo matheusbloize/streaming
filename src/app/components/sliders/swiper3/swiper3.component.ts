@@ -31,8 +31,8 @@ export class Swiper3Component implements OnInit {
         this.spaceBetween = -200
         this.slidesPerView = 4
       } else if (innerWidth > 420 && innerWidth <= 950 && innerHeight > 1000) {
-        this.spaceBetween = -50
-        this.slidesPerView = 4
+        this.spaceBetween = -100
+        this.slidesPerView = 3
       }  else if (innerWidth > 1800 && innerWidth < 2000) {
         this.spaceBetween = -1100
       } else if (innerWidth > 1500 && innerWidth < 1800) {
