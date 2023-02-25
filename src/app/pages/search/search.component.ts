@@ -47,7 +47,8 @@ export class SearchComponent implements OnInit, AfterContentChecked {
     AppComponent.windowScroll()
   }
 
-  getStream() {
+  getStream(e: Event) {
+    e.preventDefault()
     document.querySelector<HTMLDivElement>('.cover').style.display = 'block'
     document.querySelector<HTMLDivElement>('.loading').style.display = 'flex'
     this.searchMovie(document.querySelector<HTMLInputElement>('.search-input').value)
@@ -98,8 +99,7 @@ export class SearchComponent implements OnInit, AfterContentChecked {
   }
 
   searchTv(query: string) {
-    console.log(query)
-    if(query === '') {
+    if(query === "") {
       Array.from(document.querySelectorAll('.search-content')).forEach(item => {
         item.parentElement.removeChild(item)
       })

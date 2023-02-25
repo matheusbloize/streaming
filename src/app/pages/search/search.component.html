@@ -2,8 +2,10 @@
     <div class="search-top">
         <h2>Pesquisar</h2>
         <div class="search-area">
-            <input class="search-input" type="text">
-            <button class="search-button" (click)="getStream()">buscar</button>
+            <form (submit)="getStream($event)">
+                <input class="search-input" type="text">
+                <button class="search-button" (click)="getStream($event)">buscar</button>
+            </form>
         </div>
     </div>
     <div class="search-content-grid">

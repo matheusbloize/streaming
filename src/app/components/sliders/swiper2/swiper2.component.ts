@@ -21,32 +21,32 @@ export class Swiper2Component implements OnInit {
     this.spaceBetween = -1100
     this.slidesPerView = 4
     setInterval(() => {
-      if (screen.width > 1800) {
-        this.spaceBetween = -1100
-      } else if (screen.width > 1700 && screen.width < 1800) {
-        this.spaceBetween = -1000
-      } else if (screen.width > 1500 && screen.width < 1700) {
-        this.spaceBetween = -900
-      } else if(screen.width > 1400 && screen.width < 1500){
-        this.spaceBetween = -850
-      }  else if (screen.width > 1300 && screen.width < 1400) {
+      if (innerWidth > 2000) {
         this.spaceBetween = -800
-      } else if (screen.width > 1200 && screen.width < 1300) {
-        this.spaceBetween = -700
-      } else if (screen.width < 1200 && screen.width > 1000) {
+      } else if (innerWidth > 1600 && innerWidth < 2000 && innerHeight > 1200) {
         this.spaceBetween = -600
-      } else if (screen.width < 1000 && screen.width > 900) {
-        this.spaceBetween = -550
-      } else if (screen.width < 900 && screen.width > 800) {
-        this.spaceBetween = -500
+      } else if (innerWidth > 1200 && innerWidth <= 1600 && innerHeight > 1000) {
+        this.spaceBetween = -400
+      } else if (innerWidth > 950 && innerWidth <= 1200 && innerHeight > 1000) {
+        this.spaceBetween = -200
         this.slidesPerView = 4
-      } else if (screen.width <= 800 && screen.width > 600) {
-        this.spaceBetween = -350
-        this.slidesPerView = 3
-      } else if (screen.width < 600 && screen.width > 420) {
-        this.spaceBetween = -250
-        this.slidesPerView = 3
-      } else if (screen.width <= 420) {
+      } else if (innerWidth > 420 && innerWidth <= 950 && innerHeight > 1000) {
+        this.spaceBetween = -50
+        this.slidesPerView = 4
+      }  else if (innerWidth > 1800 && innerWidth < 2000) {
+        this.spaceBetween = -1100
+      } else if (innerWidth > 1500 && innerWidth < 1800) {
+        this.spaceBetween = -900
+      } else if (innerWidth > 1200 && innerWidth < 1500) {
+        this.spaceBetween = -700
+      } else if (innerWidth > 900 && innerWidth < 1200) {
+        this.spaceBetween = -500
+      } else if (innerWidth > 700 && innerWidth < 900) {
+        this.spaceBetween = -200
+      } else if (innerWidth > 420 && innerWidth < 700) {
+        this.spaceBetween = -100
+        this.slidesPerView = 4
+      } else if (innerWidth <= 420) {
         this.spaceBetween = -150
         this.slidesPerView = 3
       }
