@@ -1,15 +1,17 @@
 .other-movie-container {
     /* margin-top: .6em; */
     margin-top: 1em;
+    width: 100%;
 }
 
 .other-movie {
     margin-left: 1em;
+    width: 100%;
 }
 
 .other-movie .image-cover {
-    width: 22vw;
-    height: 25vh;
+    width: 18vw;
+    height: 18vh;
     object-position: center;
     opacity: .7;
     border-radius: 10px;
@@ -36,12 +38,14 @@
 
 @media screen and (max-width: 800px) {
     .other-movie .image-cover {
-        width: 30vw;
+        width: 18vw;
+        height: 18vh;
     }
 }
 
 @media screen and (max-width: 420px) {
     .other-movie .image-cover {
-        width: 35vw;
+        width: 18vw;
+        height: 18vh;
     }
 }

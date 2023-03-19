@@ -17,3 +17,9 @@
     width: 35vw;
     left: 1vw;
 }
+
+@media screen and (max-width: 420px) {
+    .main-movie-container {
+        width: 100%;
+    }
+}

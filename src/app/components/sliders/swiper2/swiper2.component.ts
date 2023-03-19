@@ -21,27 +21,11 @@ export class Swiper2Component implements OnInit {
     this.spaceBetween = -1100
     this.slidesPerView = 4
     setInterval(() => {
-      if (innerWidth > 2000) {
-        this.spaceBetween = -800
-      } else if (innerWidth > 1600 && innerWidth < 2000 && innerHeight > 1200) {
-        this.spaceBetween = -600
-      } else if (innerWidth > 1200 && innerWidth <= 1600 && innerHeight > 1000) {
-        this.spaceBetween = -400
-      } else if (innerWidth > 950 && innerWidth <= 1200 && innerHeight > 1000) {
-        this.spaceBetween = -200
-        this.slidesPerView = 4
-      } else if (innerWidth > 420 && innerWidth <= 950 && innerHeight > 1000) {
-        this.spaceBetween = -100
-        this.slidesPerView = 3
-      }  else if (innerWidth > 1800 && innerWidth < 2000) {
-        this.spaceBetween = -1100
+      if (innerWidth > 1800 && innerWidth < 2000) {
+        this.spaceBetween = -300
       } else if (innerWidth > 1500 && innerWidth < 1800) {
-        this.spaceBetween = -900
-      } else if (innerWidth > 1200 && innerWidth < 1500) {
-        this.spaceBetween = -700
-      } else if (innerWidth > 900 && innerWidth < 1200) {
-        this.spaceBetween = -500
-      } else if (innerWidth > 700 && innerWidth < 900) {
+        this.spaceBetween = -300
+      } else if (innerWidth > 700 && innerWidth < 1500) {
         this.spaceBetween = -200
       } else if (innerWidth > 420 && innerWidth < 700) {
         this.spaceBetween = -100
